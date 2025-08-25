@@ -1,0 +1,292 @@
+.hard-skills {
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    .skills-header {
+        height: 30px;
+        padding: 0px 10px 10px 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .card-collumn {
+            display: grid;
+            gap: 10px;
+
+            &.left {
+                .image-text {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+
+            &.right {
+                .image-text {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            .card {
+                border-radius: 5px;
+
+                .card-header {
+                    background-color: rgba(0, 0, 0, 0.098);
+                    height: 30px;
+                    padding: 10px 20px;
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.098);
+
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+
+                    img {
+                        height: 30px;
+                        filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.150));
+                    }
+                }
+
+                .image-text {
+                    padding: 10px;
+                    display: grid;
+                    grid-template-columns: repeat(2, minmax(3fr, 2fr));
+
+                    justify-items: center;
+                    align-items: center;
+                    text-align: center;
+                    gap: 10px;
+
+                    img {
+                        max-height: 70px;
+                    }
+
+                    .folders {
+
+                        img {
+                            max-height: 90px;
+                        }
+
+                        p {
+                            font-family: "Silkscreen", sans-serif;
+                            font-weight: 400;
+                            font-size: 16px;
+                            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.329));
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.soft-skills {
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 10px;
+
+    .skills-header {
+        height: 30px;
+        padding: 0px 10px 10px 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cards {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .card {
+
+            border-radius: 5px;
+
+            .card-header {
+                background-color: rgba(0, 0, 0, 0.098);
+                height: 30px;
+                padding: 10px 20px;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.098);
+
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                img {
+                    height: 30px;
+                    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.150));
+                }
+            }
+
+            .image-text {
+                padding: 15px;
+
+                gap: 10px;
+
+                &.left {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .fa-solid {
+                        color: #765685;
+                    }
+                }
+
+                &.right {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap;
+                }
+
+                img {
+                    max-height: 80px;
+                }
+
+                p {
+                    font-family: "Silkscreen", sans-serif;
+                    font-weight: 400;
+                    font-size: 20px;
+                    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.329));
+                }
+            }
+        }
+    }
+}
+
+.estudos {
+    width: 60%;
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 15px;
+    border-radius: 10px;
+
+    .skills-header {
+        height: 30px;
+        padding: 0px 10px 10px 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cards {
+
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .card {
+
+            border-radius: 5px;
+
+            .card-header {
+                background-color: rgba(0, 0, 0, 0.098);
+                height: 30px;
+                padding: 10px 20px;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.098);
+
+                display: flex;
+                align-items: center;
+                gap: 15px;
+
+                img {
+                    height: 30px;
+                    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.150));
+                }
+            }
+
+            .image-text {
+                padding: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                p {
+                    font-family: "Silkscreen", sans-serif;
+                    font-weight: 400;
+                    font-size: 18px;
+                    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.329));
+
+                    .fa-solid {
+                        color: #765685;
+                    }
+
+                    &.sub-folder {
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+
+    .hard-skills,
+    .soft-skills,
+    .estudos {
+        width: 90%;
+
+        .skills-title {
+            font-size: 16px;
+        }
+
+        .cards {
+
+            .card,
+            .card-collumn .card {
+                .card-title {
+                    font-size: 14px;
+                }
+
+                .image-text {
+                    img {
+                        height: 50px;
+                    }
+
+                    p,
+                    .folders p {
+                        font-size: 12px;
+                    }
+                }
+
+                .card-header,
+                .card-collumn .card-header {
+                    img {
+                        height: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .hard-skills,
+    .soft-skills {
+        .cards {
+            grid-template-columns: 1fr;
+        }
+    }
+}

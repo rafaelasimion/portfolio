@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quando&family=Road+Rage&family=Silkscreen:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    user-select: none;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    background-color: #0A1123;
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 80px;
+
+        .titulo {
+            font-family: "Quando", serif;
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .card-title,
+        .skills-title,
+        .contato-title {
+            font-family: "Silkscreen", sans-serif;
+            font-weight: 400;
+            font-size: 22px;
+            filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.329));
+        }
+
+        .intro {
+            width: 90%;
+            margin-top: 50px;
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            .text {
+                width: calc(100% - 50%);
+            }
+
+            img {
+                float: right;
+                width: 150px;
+                height: min-content;
+            }
+        }
+    }
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    border-bottom: 4px solid #996FAF;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #btn-menu {
+        background: none;
+        border: none;
+        padding: 5px;
+        font-size: 25px;
+        cursor: pointer;
+        display: none;
+    }
+
+    .logo {
+        height: 100%;
+        padding-left: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            height: 80%;
+        }
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu {
+        padding-right: 50px;
+        display: flex;
+        gap: 80px;
+        list-style: none;
+
+        li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            a {
+                color: white;
+                padding: 5px 8px;
+            }
+
+            .ativo {
+                color: #825F9C;
+            }
+        }
+
+    }
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    a {
+        width: 90%;
+        text-align: center;
+
+        i {
+            color: #996FAF;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    header {
+
+        #btn-menu {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            right: 10px;
+        }
+
+        .menu {
+            display: none !important;
+        }
+
+        .menu-toggle {
+            background-color: #dcb0cc;
+            width: 70%;
+            height: 600px;
+            padding: 70px 20px 30px 20px;
+            gap: 0;
+            flex-direction: column;
+            list-style: none;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+
+            li {
+                margin: 20px 0;
+
+                a {
+                    padding-left: 15px;
+                }
+
+                .ativo {
+                    font-weight: 600;
+                    color: #825F9C;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+
+    body {
+        main {
+            gap: 50px;
+            .intro {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+
+                .text {
+                    width: 100%;
+                }
+            }
+
+            .card-title,
+            .skills-title,
+            .contato-title {
+                font-size: 15px;
+            }
+        }
+    }
+}
