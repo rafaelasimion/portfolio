@@ -170,6 +170,8 @@ footer {
             right: 0;
             z-index: 1;
 
+            transition: 1s ease;
+
             li {
                 margin: 20px 0;
 
