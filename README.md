@@ -1,7 +1,9 @@
 # 🌐 Portfólio - Rafaela Simion
 
 Bem-vindo(a) ao meu portfólio! 🚀  
-Aqui compartilho alguns dos projetos que desenvolvi durante meu curso de **Análise e Desenvolvimento de Sistemas (ADS)** e estudos pessoais.  
+Aqui compartilho alguns dos projetos que desenvolvi durante meu curso de **Análise e Desenvolvimento de Sistemas (ADS)** e estudos pessoais.
+
+📌 [Visualize aqui](https://rafaelasimion.github.io/portfolio/)
 
 ---
 
