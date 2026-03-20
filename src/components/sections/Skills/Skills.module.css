@@ -1,0 +1,155 @@
+.content {
+    display: grid;
+    grid-template-areas:
+        "skills education"
+        "skills courses"
+    ;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 20px;
+}
+
+.skillsCard,
+.educationCard,
+.courseCard {
+    background-color: var(--purple-transparent);
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.skillsCard {
+    grid-area: skills;
+}
+
+.educationCard {
+    grid-area: education;
+}
+
+.courseCard {
+    grid-area: courses;
+}
+
+.skillList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 15px;
+}
+
+.skillItem {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.skillItem:hover {
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.263));
+    transition: 0.5s ease;
+    transform: translateY(-2px);
+}
+
+.icon {
+    font-size: 50px;
+    color: var(--purple-light);
+}
+
+.studying {
+    background-color: #9681b81f;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+    cursor: help;
+}
+
+.studyingIcon {
+    color: var(--purple-light);
+}
+
+.tooltip {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #26212edb;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 4px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.studying:hover .tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-4px);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.item {
+    margin: 5px 0;
+    border: 2px solid rgba(255, 255, 255, 0.13);
+    border-left: 5px solid var(--purple-light);
+    border-radius: 5px;
+}
+
+.text,
+.badge {
+    width: fit-content;
+    margin: 5px 0;
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        grid-template-areas:
+            "skills skills"
+            "education courses";
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .content {
+        grid-template-areas:
+            "skills"
+            "education"
+            "courses";
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .skillList {
+        gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+
+    }
+    .skillItem {
+        margin: 8px 0;
+    }
+    .icon {
+        font-size: 40px;
+    }
+}

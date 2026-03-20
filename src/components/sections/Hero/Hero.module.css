@@ -1,0 +1,98 @@
+.hero {
+    background-image: url('../../../assets/img/heroBg.svg');
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    user-select: none;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.text {
+    font-size: clamp(18px, 2.5vw, 25px);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.274));
+}
+
+.tourney {
+    font-family: "Tourney", sans-serif;
+    font-size: clamp(28px, 6.5vw, 80px);
+    animation: float 4s ease-in-out infinite;
+}
+
+.highlight {
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.image {
+    width: clamp(200px, 40vw, 600px);
+
+    img {
+        width: 100%;
+        height: auto;
+        filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.365));
+        animation: glow 2s ease-in-out infinite alternate;
+
+    }
+}
+
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px #a855f7;
+        filter: drop-shadow(0 0 10px #a855f7);
+    }
+
+    to {
+        text-shadow:
+            0 0 20px #a855f7,
+            0 0 30px #a855f7;
+
+        filter: drop-shadow(0 0 20px #a855f7);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        padding-top: 40px;
+    }
+
+    .image {
+        width: clamp(280px, 70vw, 400px);
+    }
+
+    .text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tourney {
+        font-size: clamp(30px, 12vw, 40px);
+        line-height: 1;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+}

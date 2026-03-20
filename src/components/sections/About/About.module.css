@@ -1,0 +1,36 @@
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.text {
+    width: 100%;
+}
+
+.highlight {
+    color: var(--purple-light);
+    font-weight: 500;
+}
+
+.image {
+    height: 220px;
+}
+
+@media (max-width: 950px) {
+    .about {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .text {
+        width: 90%;
+    }
+}
+
+@media (max-width: 550px) {
+    .image {
+        height: 150px;
+    }
+}

@@ -1,0 +1,52 @@
+@import './styles/variables.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Poppins", sans-serif;
+}
+
+a:hover {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.459));
+  transition: 0.2s ease-in-out;
+}
+
+.title,
+.subtitle {
+  font-family: "Quando", serif;
+  font-weight: 300;
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  margin: 5px 0;
+}
+
+.section {
+  width: 70%;
+  margin: 100px auto;
+  user-select: none;
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 1250px) {
+  .section {
+    width: 90%;
+    margin: 80px auto;
+  }
+}
