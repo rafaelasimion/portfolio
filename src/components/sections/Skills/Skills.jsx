@@ -6,9 +6,9 @@ import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { FaReact } from "react-icons/fa";
+import { FaFigma } from "react-icons/fa6";
 import { FaGitAlt } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import { LuCloudCog } from "react-icons/lu";
 import { FaBook } from "react-icons/fa";
 
 export default function Skills() {
@@ -18,9 +18,9 @@ export default function Skills() {
         { id: 2, desc: "css", icon: FaCss3Alt },
         { id: 3, desc: "javascript", icon: IoLogoJavascript },
         { id: 4, desc: "react", icon: FaReact },
-        { id: 5, desc: "git", icon: FaGitAlt },
-        { id: 6, desc: "github", icon: FaGithub },
-        { id: 7, desc: "api rest", icon: LuCloudCog },
+        { id: 5, desc: "figma", icon: FaFigma },
+        { id: 6, desc: "git", icon: FaGitAlt },
+        { id: 7, desc: "github", icon: FaGithub },
     ];
 
     const institutions = [
@@ -56,12 +56,6 @@ export default function Skills() {
                             );
                         })}
                     </ul>
-
-                    <div className={styles.studying}>
-                        <FaBook className={styles.studyingIcon} />
-                        next.js | express | python | mysql
-                         <span className={styles.tooltip}>Estudando atualmente</span>
-                    </div>
 
                 </div>
 
